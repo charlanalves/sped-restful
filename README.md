@@ -1,11 +1,13 @@
-# RestNFe
+# Sped-RestFul
 
 >NOTA:este projeto está apenas na fase de dellineamento sem nenhuma estrutura construida ainda.
 
 RestFul Service para gestão das NFe
 
-A intenção por trás dessa aplicação é montar um servidor RestFul que poderá ser acessado pelos **"Usuários"** cadastrados e fazer todo os processos de gestão das NFe, como:
+A intenção por trás dessa aplicação é montar um servidor RestFul que poderá ser acessado pelos **"Emitentes"** cadastrados e fazer todo os processos de gestão das NFe, como:
 
+- Digitação de NFe e seu armazenamento em base de dados
+- Gestão das NFe emitidas e Recebidas de Terceiros
 - Envio de lote de NFe (incluindo a conversão de TXT para xml e assinatura)
 - Busca do Status dos Webservices das SEFAZ
 - Busca do Status da NFe (por recibo ou chave)
@@ -19,22 +21,24 @@ A intenção por trás dessa aplicação é montar um servidor RestFul que poder
 - Impressão da DANFE e DACCE
 
 Serviços opcionais
-- Armazenamento e backup de NFe e outros documentos (emitidos e recebidos)
+- Armazenamento e backup de NFe e outros documentos (emitidos e recebidos) em arquivo
 - Envio de emails com a NFe, CCe ou Cancelamento
 
 ## [Instalação](docs/INSTALL.md)
 
 ## [Configuração](docs/CONFIGURE.md)
 
-## [Gestão de Usuários](docs/USUARIOS.md)
-Esses métodos alteram os dados do usuário do sistema e seus recursos.
+## [Gestão de Emitente](docs/EMITENTE.md)
+Esses métodos alteram os dados do Emitente do sistema e seus recursos.
 
-1. [Listar Usuários](docs/USUARIOS.md#listar-usuários)
-2. [Cadastrar Usuários](docs/USUARIOS.md#cadastrar-usuários)
-2. [Editar Usuário](docs/USUARIOS.md#editar-usuário)
-3. [Deletar Usuário](docs/USUARIOS.md#deletar-usuário)
-4. [Dados do Certificado](docs/USUARIOS.md#dados-do-certificado)
-5. [Upgrade de certificado digital do *"Usuário"*](docs/USUARIOS.md#upgrade-do-certificado)
+O sistema deve permitir multiplos emitentes.
+
+1. [Listar Emitente](docs/EMITENTE.md#listar-usuários)
+2. [Cadastrar Emitente](docs/EMITENTE.md#cadastrar-usuários)
+2. [Editar Emitente](docs/EMITENTE.md#editar-usuário)
+3. [Deletar Emitente](docs/EMITENTE.md#deletar-usuário)
+4. [Dados do Certificado](docs/EMITENTE.md#dados-do-certificado)
+5. [Upgrade de certificado digital do *"Emitente"*](docs/EMITENTE.md#upgrade-do-certificado)
 
 ## [Gestão do Ambiente Operacional](docs/AMBIENTE.md)
 Esses metodos alteram o ambiente operacional do sistema.
@@ -48,6 +52,14 @@ Esses metodos alteram o ambiente operacional do sistema.
 7. [Editar Modelo de NFe](docs/AMBIENTE.md#editar-modelo-de-nfe)
 8. [Protocolo SSL](docs/AMBIENTE.md#protocolo-ssl)
 9. [Editar Protocolo SSL](docs/AMBIENTE.md#editar-protocolo-ssl)
+
+## [Gestão de NFe](docs/GESTAO.md)
+
+A gestão permite a busca das NFe registrados no sistema bem como suas informações basicas e recuperação quando necessário.
+
+## [Emissão de NFe](docs/EMISSAO.md)
+
+A emissão recebe os dados brutos da interface e grava em base de dados como rascunho (em Digitação) e permite as ações subsequentes.
 
 ## [Acesso à SEFAZ](docs/SEFAZ.md)
 Esses métodos interagem com o SEFAZ e retornam os resultados dessa interação.
@@ -83,7 +95,7 @@ Esses métodos interagem com o SEFAZ e retornam os resultados dessa interação.
 ## [Acesso aos dados de LOG](docs/LOG.md)
 Esses métodos permitem o acesso aos dados de LOG destinados a auxiliar o desenvolvedor ou o usuário a encontarr a causa de problemas.
 
-1. [Listar Log](docs/LOG.md)
-2. [Limpar LOGs](docs/LOG.md#limpar)
+1. [Listar Log](docs/LOG.md#listar)
+2. [Limpar Logs](docs/LOG.md#limpar)
 
 ## [Segurança e Acessos](docs/SECURITY.md)
