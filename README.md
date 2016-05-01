@@ -57,9 +57,16 @@ Esses metodos alteram o ambiente operacional do sistema.
 
 A gestão permite a busca das NFe registrados no sistema bem como suas informações basicas e recuperação quando necessário.
 
+1. [Lista NFes](docs/GESTAO.md#listar)
+
+
 ## [Emissão de NFe](docs/EMISSAO.md)
 
 A emissão recebe os dados brutos da interface e grava em base de dados como rascunho (em Digitação) e permite as ações subsequentes.
+
+1. [Carrega NFe](EMISSAO.md#load)
+
+
 
 ## [Acesso à SEFAZ](docs/SEFAZ.md)
 Esses métodos interagem com o SEFAZ e retornam os resultados dessa interação.
@@ -83,7 +90,7 @@ Esses métodos interagem com o SEFAZ e retornam os resultados dessa interação.
 2. [Enviar Email CCe](docs/EMAILS.md#enviar-cce)
 3. [Enviar Email Cancelamento](docs/EMAILS.md#enviar-cancelamento)
 
-## [Acesso aos Documentos Emitidos](docs/STORAGE.md)
+## [Acesso e Impressão dos Documentos Emitidos](docs/STORAGE.md)
 
 1. [Lista NFe emitidas](docs/STORAGE.md)
 2. [Download NFe emitida](docs/STORAGE.md)
