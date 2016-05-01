@@ -1,9 +1,12 @@
-vendor/
-node_modules/
-
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
+.idea
+/local
+/vendor
+/nbproject
+/build
+/node_modules
+/certs/*.pem
+/certs/*.pfx
+composer.lock
 
 # Laravel 5 & Lumen specific
 bootstrap/cache/
