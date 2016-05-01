@@ -1,15 +1,15 @@
-# RestNFe
+# Sped-RestFul
 
-## Gestão de Usuários
-Atraves desses serviços é possivel incluir, modificar ou remover os usuários da aplicação.
-O usuário é uma referência a empresa emitente de NFe e todos os dados são obrigatórios.
->Além dos dados do usuário também devem ser passados o certificado digital, após o usuário haver sido cadastrado com sucesso.
+## Gestão de Emitente
+Atraves desses serviços é possivel incluir, modificar ou remover os emitentes da aplicação.
+O Emitente é uma referência a empresa emitente de NFe e todos os dados são obrigatórios.
+>Além dos dados do emitente também devem ser passados o certificado digital, após o emitente haver sido cadastrado com sucesso.
 
-## Listar Usuários
-Serão retornados quantos usuários estiverem cadastrados.
+## Listar Emitentes
+Serão retornados quantos emitentes estiverem cadastrados.
 >Somente o administrador do sistema tem acesso a essa lista.
 
-**GET:** http://dominio/restnfe/usuario
+**GET:** http://dominio/restnfe/emitente
 
 Retorno de status HTTP: 200 (Success)
 
@@ -49,11 +49,11 @@ Retorno:
     }
 ```
 
-## Cadastrar Usuários
+## Cadastrar Emitentes
 
-> O cadastro de novos usuários somente poderá ser feito pelo próprio administrador do sistema.
+> O cadastro de novos emitentes somente poderá ser feito pelo próprio administrador do sistema.
 
-**POST:** http://dominio/restnfe/usuario
+**POST:** http://dominio/restnfe/emitente
 
 > Todos os parametros são considerados obrigatórios e devem existir mesmo que como uma string vazia.
 
@@ -97,13 +97,13 @@ Retorno:
 ```
 
 
-## Editar Usuário
+## Editar Emitente
 
-> A edição dos dados do usuário poderá der feita a partir da autenticação do próprio usuário ou do administrador do sistema
+> A edição dos dados do emitente poderá der feita a partir da autenticação do próprio emitente ou do administrador do sistema
 
-$id = id do usuário
+$id = id do emitente
 
-**PUT:** http://dominio/restnfe/usuario/$id
+**PUT:** http://dominio/restnfe/emitente/$id
 
 > Todos os parâmetros são considerados obrigatórios e devem existir mesmo que como uma string vazia.
 
@@ -146,11 +146,11 @@ Retorno:
     }
 ```
 
-## Deletar Usuário
+## Deletar Emitente
 
-> A remoção do usuário somente poderá ser feita com a autenticação do administrador do sistema.
+> A remoção do emitente somente poderá ser feita com a autenticação do administrador do sistema.
 
-**DELETE:** http://dominio/restnfe/usuario/$id
+**DELETE:** http://dominio/restnfe/emitente/$id
 
 Retorno de status HTTP: 200 (Success)
 
@@ -163,11 +163,11 @@ Retorno:
 
 ## Dados do Certificado
 
-> Os dados referentes ao certificado digital atual, poderão ser obtidos pelo próprio usuário ou pelo administrador apenas.
+> Os dados referentes ao certificado digital atual, poderão ser obtidos pelo próprio emitente ou pelo administrador apenas.
 
-**GET:** http://dominio/restnfe/usuario/$id/certificado
+**GET:** http://dominio/restnfe/emitente/$id/certificado
 
-$id = id do usuário
+$id = id do emitente
 
 Retorno de status HTTP: 200 (Success)
 
@@ -183,11 +183,11 @@ Retorno:
 
 ## Upgrade do Certificado
 
-> A inclusão ou renovação do certificado digital poderá ser feita apenas pelo próprio usuário ou pelo administrador.
+> A inclusão ou renovação do certificado digital poderá ser feita apenas pelo próprio emitente ou pelo administrador.
 
-$id = id do usuário
+$id = id do emitente
 
-**POST:** http://dominio/restnfe/usuario/$id/certificado
+**POST:** http://dominio/restnfe/emitente/$id/certificado
 
 Parametros:
 

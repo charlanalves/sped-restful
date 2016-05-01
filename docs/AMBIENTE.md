@@ -1,11 +1,12 @@
-# RestNFe
-# Gestão de Ambiente Operacional
+# Sped-RestFul
+
+## Gestão de Ambiente Operacional
 Neste bloco estão contidos os métodos necessários para a gestão das condições operacionais do sistema.
 
 ## Ambiente
 Retorna qual o ambiente que está ativo no sistema
 
-**GET:** http://dominio/restnfe/usuario/$id/ambiente
+**GET:** http://dominio/restnfe/emitente/$id/ambiente
 Retorno de status HTTP: 200
 
 Retorno:
@@ -23,7 +24,7 @@ Especifica em qual ambiente o aplicativo deve operar.
 >**ATENÇÃO:**
 >Cuidado ao editar ou modificar o ambiente, pois os dados enviados ao embiente de produção e aceitos terão validade fiscal.
 
-**POST:** http://dominio/restnfe/usuario/$id/ambiente
+**POST:** http://dominio/restnfe/emitente/$id/ambiente
 tpAmb = tipo de ambiente 1-produção ou 2-homologação
 >Se nenhum dado for passado o comando será ignorado.
 
@@ -48,7 +49,7 @@ Retorno:
 ## Contingência
 Checa se está ativada a contingência
 
-**GET:** http://dominio/restnfe/usuario/$id/contingencia
+**GET:** http://dominio/restnfe/emitente/$id/contingencia
 
 Retorno de status HTTP: 200
 
@@ -68,7 +69,7 @@ Retorno:
 
 Ativa o modo de contingência SVC-AN ou SVC-RS, dependendo do estado do emissor.
 
-**POST:** http://dominio/restnfe/usuario/$id/contingencia
+**POST:** http://dominio/restnfe/emitente/$id/contingencia
 
 >O parametro motivo é obrigatório
 
@@ -94,7 +95,7 @@ Retorno:
 ## Desativar Contingência
 Desativa o modo de contingência SVC-AN ou SVC-RS. Para desativar o modo de contingência mantenha o campo motivo em "branco" (vazio)
 
-**DELETE:** http://dominio/restnfe/usuario/$id/contingencia
+**DELETE:** http://dominio/restnfe/emitente/$id/contingencia
 
 Retorno de status HTTP: 200
 
@@ -112,7 +113,7 @@ Retorno:
 Retorna o modelo base setado no sistema.
 >Existem dois modelos possiveis para NFe o modelo "55", para NFe, e o modelo "65", para NFCe.
 
-**GET:** http://dominio/restnfe/usuario/$id/modelo
+**GET:** http://dominio/restnfe/emitente/$id/modelo
 
 Retorno de status HTTP: 200
 
@@ -127,7 +128,7 @@ Retorno:
 
 ## Editar Modelo de NFe
 
-**POST:** http://dominio/restnfe/usuario/$id/modelo
+**POST:** http://dominio/restnfe/emitente/$id/modelo
 Parametros:
 ```json
   {
@@ -148,7 +149,7 @@ Retorno:
 ## Protocolo SSL
 Este método retorna o protocolo setado para uso na comunicação SOAP
 
-**GET:** http://dominio/restnfe/usuario/$id/protocolssl
+**GET:** http://dominio/restnfe/emitente/$id/protocolssl
 
 Retorno de status HTTP: 200
 
@@ -165,7 +166,7 @@ Este método força o uso de um determinado protocolo de criptografia "https"
 >Algumas vezes ocorre do servidor estar "mal configurado" ou por problemas durante o "handshake" entre o cliente cURL e o servidor. E devido a isso o PHP não consegue identificar qual é o protocolo a ser usado naquele caso e de forma automática.
 >Então é necessário **FORÇAR** um determinado protocolo para que a operação seja realizada.
 
-**POST:** http://dominio/restnfe/usuario/$id/protocolssl
+**POST:** http://dominio/restnfe/emitente/$id/protocolssl
 Parametros:
 ```json
   {
